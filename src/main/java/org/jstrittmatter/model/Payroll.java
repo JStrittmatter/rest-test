@@ -1,6 +1,7 @@
 package org.jstrittmatter.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,7 +17,7 @@ public class Payroll implements Serializable {
     private Double grossAmount;
     private Integer federalTaxRate;
     private Integer stateTaxRate;
-    private List<Deduction> deductions;
+    private List<Deduction> deductions = new ArrayList<Deduction>();
 
     public String getFirstName() {
         return firstName;
