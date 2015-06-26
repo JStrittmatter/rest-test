@@ -9,6 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by justin on 6/24/15.
  */
@@ -19,10 +22,9 @@ public class PayrollController {
     @ModelAttribute("payroll")
     public Payroll getPayroll(){
         Payroll payroll = new Payroll();
-        Deduction deduction = new Deduction();
-        payroll.getDeductions().add(deduction);
         return payroll;
     }
+
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String goHome(){
